@@ -1,0 +1,130 @@
+$my_font: 'Rock Salt';
+
+.page{
+	background-color: black;
+	color: white;	
+
+	.lead{
+		
+
+		.header{
+			margin-top: 100px;
+			margin-bottom: 400px;
+
+			.profile-pic{
+				text-align: center;
+
+				img{
+					width: 400px;
+				}
+			}
+
+			.attributes{
+
+				h1{
+					margin: 50px 0;
+					font-family: $my_font;
+				}
+
+				ul{
+					margin-left: 100px;
+
+					li{
+						list-style: none;
+						font-family: 'Waiting for the Sunrise';
+						font-size: 20pt;
+					}
+				}
+			}	
+		}
+	}
+
+	.portfolio{
+		height: 700px;
+		background-image: url('/mobile.jpeg');
+		background-size: cover;
+		background-attachment: fixed;
+
+		.check-it-out{
+			position: relative;
+			top: 400px;
+			left: 65%;
+			font-family: 'Rock Salt';
+
+			a{
+				color: black;
+			}
+
+			a:hover{
+				color: red;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.summary{
+		height: 600px;
+	}
+
+	.contact{
+		@extend .portfolio;
+		background-image: url('/sites.jpeg');
+	}
+
+	.footer{
+		height: 250px;
+		background-color: #675B62;
+	}
+
+	.nav{
+		position: absolute;
+		top: 600px;
+		width: 100%;
+		text-align: center;
+		background-color: black;
+
+		ul{
+
+			li{
+				display: inline;
+				margin: 0 10%;
+
+				a{
+					color: gray;
+					font-family: 'Ek Mukta';
+					font-size: 28pt;
+				}
+
+				a:hover{
+					color: red;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	.nav-clone{
+		@extend .nav;
+		position: fixed;
+		top: 0;
+
+		img{
+			position: fixed;
+			top: 0;
+			left: 15px;
+			z-index: 2;
+		}
+
+		ul{
+			li{
+				a{
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+
+
+
