@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'mandrill-api', require: 'mandrill'
+gem 'awesome_print'
+
+gem 'therubyracer'
+gem 'fcgi'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'

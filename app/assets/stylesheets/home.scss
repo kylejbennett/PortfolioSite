@@ -15,7 +15,7 @@ $my_font: 'Rock Salt';
 				text-align: center;
 
 				img{
-					width: 400px;
+					width: 350px;
 				}
 			}
 
@@ -49,7 +49,7 @@ $my_font: 'Rock Salt';
 			position: relative;
 			top: 400px;
 			left: 65%;
-			font-family: 'Rock Salt';
+			font-family: $my_font;
 
 			a{
 				color: black;
@@ -59,6 +59,10 @@ $my_font: 'Rock Salt';
 				color: red;
 				text-decoration: none;
 			}
+		}
+
+		.contact-me{
+			@extend .check-it-out;
 		}
 	}
 
@@ -71,9 +75,99 @@ $my_font: 'Rock Salt';
 		background-image: url('/sites.jpeg');
 	}
 
+	.prof-gallery{
+		.projects{
+			.boxes{
+				height: 450px;
+				border: 15px solid black;
+
+				a{
+					color: white;
+
+					h2{
+						font-family: 'Waiting for the Sunrise';
+					}
+				}
+
+				a:hover{
+					color: red;
+					text-decoration: none;
+				}
+
+				p{
+					padding-top: 5px;
+				}
+				
+				.proj1{
+					height: 300px;
+					background-image: url('/food.jpg');
+					background-size: cover;
+				}
+
+				.proj2{
+					@extend .proj1;
+					background-image: url('/heat_map2.png');
+				}
+
+				.proj3{
+					@extend .proj1;
+					background-image: url('/coffee.jpg');
+				}
+
+				.proj4{
+					@extend .proj1;
+					background-image: url('/dog.jpeg');
+				}
+
+				.proj5{
+					@extend .proj1;
+					background-image: url('/Coastline.jpg');
+				}
+
+				.proj6{
+					@extend .proj1;
+					background-image: url('/pangolin7.jpg');
+				}
+			}
+		}
+	}
+
 	.footer{
 		height: 250px;
 		background-color: #675B62;
+
+		.foot-row{
+			height: 100%;
+
+			.right{
+				height: 100%;
+				padding-top: 20px;
+
+				li{
+					
+					text-align: center;
+					list-style: none;
+					font-size: 36pt;
+					color: black;
+
+					a{
+						color: black;
+					}
+
+					a:hover{
+						color: red;
+					}
+				}
+
+				#copy{
+					position: absolute;
+					font-size: 12pt;
+					padding-right: 0;
+					bottom: 15px;
+					right: 15px;
+				}
+			}
+		}
 	}
 
 	.nav{
@@ -91,8 +185,8 @@ $my_font: 'Rock Salt';
 
 				a{
 					color: gray;
-					font-family: 'Ek Mukta';
-					font-size: 28pt;
+					font-family: $my_font;
+					font-size: 20pt;
 				}
 
 				a:hover{
@@ -106,7 +200,9 @@ $my_font: 'Rock Salt';
 	.nav-clone{
 		@extend .nav;
 		position: fixed;
-		top: 0;
+		padding-top: 10px;
+		top: 0px;
+		visibility: hidden;
 
 		img{
 			position: fixed;
@@ -120,6 +216,121 @@ $my_font: 'Rock Salt';
 				a{
 					color: white;
 				}
+			}
+		}
+	}
+}
+
+.nav-fixed{
+	width: 100%;
+	text-align: center;
+	background-color: black;
+	position: fixed;
+	padding-top: 10px;
+	top: 0px;
+
+	img{
+		position: fixed;
+		top: 0;
+		left: 15px;
+		z-index: 2;
+	}
+
+	ul{
+		li{
+			display: inline;
+			margin: 0 10%;
+
+			a{
+				color: white;
+				font-family: $my_font;
+				font-size: 20pt;
+			}
+
+			a:hover{
+				color: red;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+// ## CONTACT ##
+
+.contact-body{
+	width: 100%;
+	padding-top: 150px;
+	padding-bottom: 150px;
+	background-color: black;
+	color: white;
+	font-family: 'Waiting for the Sunrise';
+
+	h1{
+		padding-left: 25px;
+		font-family: $my_font;
+	}
+
+	.contact-form{
+		text-align: center;
+		width: 900px;
+		margin: 50px auto;
+
+		.contact-info{
+			h3{
+				font-size: 14pt;
+			}
+
+			input{
+				font-family: sans-serif;
+				color: black;
+			}
+
+			textarea{
+				@extend input;
+				width: 600px;
+
+			}
+
+			button{
+				color: black;
+			}
+		}
+	}
+}
+
+.footer{
+	height: 250px;
+	background-color: #675B62;
+
+	.foot-row{
+		height: 100%;
+
+		.right{
+			height: 100%;
+			padding-top: 20px;
+
+			li{
+				
+				text-align: center;
+				list-style: none;
+				font-size: 36pt;
+				color: black;
+
+				a{
+					color: black;
+				}
+
+				a:hover{
+					color: red;
+				}
+			}
+
+			#copy{
+				position: absolute;
+				font-size: 12pt;
+				padding-right: 0;
+				bottom: 15px;
+				right: 15px;
 			}
 		}
 	}

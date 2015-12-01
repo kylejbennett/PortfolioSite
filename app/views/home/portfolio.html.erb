@@ -1,1 +1,118 @@
-<h1>Portfolio</h1>
+
+<div class="page">
+	<div class="lead container-fluid">
+		<div class="header row">
+			<div class="profile-pic col-md-6">
+				<%= image_tag '/me.png' %>
+			</div>
+			<div class="attributes col-md-6">
+				<h1>My Portfolio</h1>
+				<ul>
+					<li>Web Applications</li>
+					<li>Collaborative Projects</li>
+					<li>Side Projects</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="prof-gallery container-fluid">
+		<div class="projects row">
+			<div class="boxes col-md-4">
+				<a href="https://github.com/kylejbennett/food-web-app.git">
+					<h2>COOKitUP</h2>
+				</a>
+				<div class="proj1"></div>
+				<p>A robust full featured recipe application which integrates the Yummly API.  Allows users to search from 1,000,000+ recipes.</p>
+			</div>
+			<div class="boxes col-md-4">
+				<a href="http://ec2-54-165-91-102.compute-1.amazonaws.com/">
+					<h2>StarHopper</h2>
+				</a>
+				<div class="proj2"></div>
+				<p>Web Application utilizing the Yelp API to generate a heatmap of results based on user search criteria.</p>
+			</div>
+			<div class="boxes col-md-4">
+				<a href="https://github.com/kylejbennett/MyWallet.git">
+					<h2>Wallet App</h2>
+				</a>
+				<div class="proj3"></div>
+				<p>An app built to store theoretical credit card info, for the purpose of working with validations and auths.</p>
+			</div>
+		</div>
+		<div class="projects row">
+			<div class="boxes col-md-4">
+				<a href="https://github.com/kylejbennett/Rails_Full_Blog.git">
+					<h2>Blogging App</h2>
+				</a>
+				<div class="proj4"></div>
+				<p>A nicely functional blog built in rails. Enforces use of model interaction.  Also includes basic testing.</p>
+			</div>
+			<div class="boxes col-md-4">
+				<a href="https://github.com/kylejbennett/SinatraDroneSite.git">
+					<h2>Drone Services Site</h2>
+				</a>
+				<div class="proj5"></div>
+				<p>A mock business site built with Ruby, Sinatra, Javascript, Html, and CSS. Includes a video background.</p>
+			</div>
+			<div class="boxes col-md-4">
+				<a href="http://nycda.zone/bennett194/causesite/">
+					<h2>Pangolin Cause Site</h2>
+				</a>
+				<div class="proj6"></div>
+				<p>A simple site bringing awareness to an endangered species.  Built for the purpose of learning HTML and CSS.</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer container-fluid">
+		<div class="foot-row row">
+			<div class="left col-md-4">
+
+			</div>
+			<div class="center col-md-4"></div>
+			<div class="right col-md-4">
+				<ul>
+					<li>
+						<a href="https://www.linkedin.com/in/kyle-bennett-b796a593">
+							<i class="fa fa-linkedin"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/kylejbennett">
+							<i class="fa fa-github"></i>
+						</a>
+					</li>
+					<li id="copy">
+						&copy Copyright 2015
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="nav">
+		<ul>
+			<li>
+				<%= link_to 'Home', root_path %>
+			</li>
+			<li>
+				<%= link_to 'Portfolio', home_portfolio_path %>
+			</li>
+			<li>
+				<%= link_to 'Contact', home_contact_path %>
+			</li>
+		</ul>
+	</div>
+	<div class="nav-clone">
+		<%= image_tag '/kblogo.ico' %>
+		<ul>
+			<li>
+				<%= link_to 'Home', root_path %>
+			</li>
+			<li>
+				<%= link_to 'Portfolio', home_portfolio_path %>
+			</li>
+			<li>
+				<%= link_to 'Contact', home_contact_path %>
+			</li>
+		</ul>
+	</div>
+</div>

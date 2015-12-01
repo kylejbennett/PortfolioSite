@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$(".nav-clone").hide();
+
 
 	$(window).scroll(function (event) {
         var sc = $(window).scrollTop();
@@ -7,22 +7,27 @@ $(document).ready(function(){
 
         if (sc > 600){
         	$(".nav").hide();
-        	$(".nav-clone").show();
+        	$(".nav-clone").css("visibility", "visible");
         } else {
         	$(".nav").show();
-        	$(".nav-clone").hide();
+        	$(".nav-clone").css("visibility", "hidden");
         }
 
-        if (sc < 700) {
+        if (sc < 650) {
         	$(".check-it-out").hide('slow');
-        } else if (sc > 1200){
-        	$(".check-it-out").hide('slow');
-        } else if (sc > 2100){	
-        	$(".check-it-out").show('slow');
-        } else if (sc > 2600){	
+        } else if (sc > 1100){
         	$(".check-it-out").hide('slow');
         } else {
         	$(".check-it-out").show('slow');
+        }
+
+        if (sc < 2000){	
+        	$(".contact-me").hide('slow');
+        } else if (sc > 2600){	
+        	$(".contact-me").hide('slow');
+        } else {
+        	$(".contact-me").show('slow');
         }
     });
 });
+

@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   	get 'home/portfolio'
   	get 'home/contact'
 
+  	post 'home/sendmail' => 'home#sendmail'
   
 end
