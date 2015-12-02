@@ -5,11 +5,14 @@ $my_font: 'Rock Salt';
 	color: white;	
 
 	.lead{
-		
-
+	
 		.header{
 			margin-top: 100px;
 			margin-bottom: 400px;
+
+			@media screen and (max-width: 992px) {
+				margin-bottom: 100px;
+			}
 
 			.profile-pic{
 				text-align: center;
@@ -20,6 +23,10 @@ $my_font: 'Rock Salt';
 			}
 
 			.attributes{
+				@media screen and (max-width: 992px) {
+					padding-top: 250px;
+					text-align: center;
+				}
 
 				h1{
 					margin: 50px 0;
@@ -41,15 +48,43 @@ $my_font: 'Rock Salt';
 
 	.portfolio{
 		height: 700px;
-		background-image: url('/mobile.jpeg');
-		background-size: cover;
-		background-attachment: fixed;
+		background-color: white;
+		
+		.prof-banner{
+			position: absolute;
+			height: 700px;
+			width: 100%;
+			background-size: cover;
+			background-attachment: fixed;
+			background-image: url('/mobile.jpeg');
+			opacity: 0.6;
+		}
 
 		.check-it-out{
 			position: relative;
-			top: 400px;
-			left: 65%;
+			text-align: center;
+			top: 40%;
 			font-family: $my_font;
+
+			@media screen and (max-width: 992px) {
+				top: 25%;
+
+				a{
+					font-size: 26pt;
+				}
+			}
+
+			p{
+				font-family: 'Waiting for the Sunrise';
+				font-size: 20pt;
+				margin-left: 20%;
+				margin-right: 20%;
+				color: black;
+
+				@media screen and (max-width: 992px) {
+					font-size: 26pt;
+				}
+			}
 
 			a{
 				color: black;
@@ -66,19 +101,23 @@ $my_font: 'Rock Salt';
 		}
 	}
 
-	.summary{
-		height: 600px;
+	.buffer{
+		height: 300px;
 	}
 
 	.contact{
 		@extend .portfolio;
-		background-image: url('/sites.jpeg');
+		
+		.cont-banner{
+			@extend .prof-banner;
+			background-image: url('/sites.jpeg');
+		}
 	}
 
 	.prof-gallery{
 		.projects{
 			.boxes{
-				height: 450px;
+				height: 475px;
 				border: 15px solid black;
 
 				a{
@@ -95,6 +134,8 @@ $my_font: 'Rock Salt';
 				}
 
 				p{
+					font-family: 'Waiting for the Sunrise';
+					font-size: 14pt;
 					padding-top: 5px;
 				}
 				
@@ -132,44 +173,6 @@ $my_font: 'Rock Salt';
 		}
 	}
 
-	.footer{
-		height: 250px;
-		background-color: #675B62;
-
-		.foot-row{
-			height: 100%;
-
-			.right{
-				height: 100%;
-				padding-top: 20px;
-
-				li{
-					
-					text-align: center;
-					list-style: none;
-					font-size: 36pt;
-					color: black;
-
-					a{
-						color: black;
-					}
-
-					a:hover{
-						color: red;
-					}
-				}
-
-				#copy{
-					position: absolute;
-					font-size: 12pt;
-					padding-right: 0;
-					bottom: 15px;
-					right: 15px;
-				}
-			}
-		}
-	}
-
 	.nav{
 		position: absolute;
 		top: 600px;
@@ -187,6 +190,9 @@ $my_font: 'Rock Salt';
 					color: gray;
 					font-family: $my_font;
 					font-size: 20pt;
+					padding-left: 10px;
+					padding-right: 10px;
+					padding-bottom: 0;
 				}
 
 				a:hover{
@@ -276,7 +282,7 @@ $my_font: 'Rock Salt';
 		margin: 50px auto;
 
 		.contact-info{
-			h3{
+			h2{
 				font-size: 14pt;
 			}
 
@@ -292,14 +298,23 @@ $my_font: 'Rock Salt';
 			}
 
 			button{
+				font-size: 15pt;
 				color: black;
+				width: 100px;
 			}
 		}
 	}
 }
 
+// ## RESUME ##
+
+.resume{
+	height: 100%;
+}
+
+// ## FOOTER ##
+
 .footer{
-	height: 250px;
 	background-color: #675B62;
 
 	.foot-row{
@@ -307,10 +322,43 @@ $my_font: 'Rock Salt';
 
 		.right{
 			height: 100%;
-			padding-top: 20px;
+			padding-top: 65px;
+			padding-bottom: 65px;
 
 			li{
-				
+				list-style: none;
+				text-align: center;
+
+				a{
+					font-family: 'Waiting for the Sunrise';
+					font-size: 18pt;
+					color: black;
+				}	
+
+				a:hover{
+					text-decoration: none;
+					color: red;
+				}
+			}
+
+			p{
+				position: absolute;
+				bottom: 15px;
+				right: 15px;
+				font-size: 10pt;
+			}
+		}
+
+		.center{
+			@extend .left;
+		}
+
+		.left{
+			height: 100%;
+			padding-top: 50px;
+			padding-bottom: 50px;
+
+			li{
 				text-align: center;
 				list-style: none;
 				font-size: 36pt;
@@ -323,14 +371,6 @@ $my_font: 'Rock Salt';
 				a:hover{
 					color: red;
 				}
-			}
-
-			#copy{
-				position: absolute;
-				font-size: 12pt;
-				padding-right: 0;
-				bottom: 15px;
-				right: 15px;
 			}
 		}
 	}

@@ -15,36 +15,47 @@
 		</div>
 	</div>
 	<div class="portfolio">
+		<div class="prof-banner"></div>
 		<div class="check-it-out">
+			<p>I am a budding web developer who enjoys the process of creating an enjoyable web experience.  I enjoy building everything from small business sites, to robust, fully functional web applications.</p>
 			<h3><%= link_to 'Check Out My Portfolio >>', home_portfolio_path %></h3>
 		</div>
 	</div>
-	<div class="summary"></div>
+	<div class="buffer"></div>
 	<div class="contact">
+		<div class="cont-banner"></div>
 		<div class="contact-me">
+			<p>If you are a business that is looking for a web presence or an employer looking for an ambitious developer, you can get in touch with me here.</p>
 			<h3><%= link_to 'Contact Me >>', home_contact_path %></h3>
 		</div>
 	</div>
 	<div class="footer container-fluid">
 		<div class="foot-row row">
 			<div class="left col-md-4">
-
-			</div>
-			<div class="center col-md-4"></div>
-			<div class="right col-md-4">
 				<ul>
 					<li>
 						<a href="https://www.linkedin.com/in/kyle-bennett-b796a593">
 							<i class="fa fa-linkedin"></i>
 						</a>
 					</li>
+				</ul>
+			</div>
+			<div class="center col-md-4">
+				<ul>
 					<li>
 						<a href="https://github.com/kylejbennett">
 							<i class="fa fa-github"></i>
 						</a>
 					</li>
+				</ul>
+			</div>
+			<div class="right col-md-4">
+				<ul>
+					<li>
+						<%= link_to "View my Resume", home_resume_path %>
+					</li>
 					<li id="copy">
-						&copy Copyright 2015
+						<p>&copy Copyright 2015</p>
 					</li>
 				</ul>
 			</div>

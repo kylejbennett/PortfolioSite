@@ -6,7 +6,9 @@ class HomeController < ApplicationController
   end
 
   def contact
+  end
 
+  def resume
   end
 
   def sendmail

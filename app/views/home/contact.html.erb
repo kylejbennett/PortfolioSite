@@ -20,7 +20,7 @@
 		<%= form_tag(controller: "home", action:"sendmail", method: "post") do %>
 			<!-- FIRST PANEL -->
 			<div class="contact-info">
-				<h2 class="contact-title">Send me an email</h2>
+				<h2 class="contact-title">Your info</h2>
 				<%= text_field_tag(:name, nil, :placeholder => "Name", size: "40x1", required: true) %>
 				<br>
 				<br>
@@ -29,7 +29,7 @@
 			<br>
 			<!-- SECOND PANEL -->
 			<div class="contact-info">
-				<h3 class="panel-title">Your Comments</h3>
+				<h2 class="panel-title">Your comments</h2>
 				<br>
 				<%= text_area_tag(:body, nil, :placeholder => "Message", size:"40x12") %>
 				<br>
