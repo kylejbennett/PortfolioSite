@@ -118,7 +118,7 @@ $my_font: 'Rock Salt';
 		.projects{
 			.boxes{
 				height: 475px;
-				border: 15px solid black;
+				border: 15px solid black;	
 
 				a{
 					color: white;
@@ -167,7 +167,7 @@ $my_font: 'Rock Salt';
 
 				.proj6{
 					@extend .proj1;
-					background-image: url('/pangolin7.jpg');
+					background-image: url('/maymeshot.png');
 				}
 			}
 		}
@@ -179,6 +179,10 @@ $my_font: 'Rock Salt';
 		width: 100%;
 		text-align: center;
 		background-color: black;
+		
+		@media screen and (max-width: 992px) {
+			visibility: hidden;
+		}
 
 		ul{
 
@@ -204,11 +208,17 @@ $my_font: 'Rock Salt';
 	}
 
 	.nav-clone{
-		@extend .nav;
 		position: fixed;
 		padding-top: 10px;
 		top: 0px;
+		width: 100%;
+		text-align: center;
+		background-color: black;
 		visibility: hidden;
+
+		@media screen and (max-width: 992px) {
+			visibility: visible;
+		}
 
 		img{
 			position: fixed;
@@ -219,8 +229,21 @@ $my_font: 'Rock Salt';
 
 		ul{
 			li{
+				display: inline;
+				margin: 0 10%;
+
 				a{
 					color: white;
+					font-family: $my_font;
+					font-size: 20pt;
+					padding-left: 10px;
+					padding-right: 10px;
+					padding-bottom: 0;
+				}
+
+				a:hover{
+					color: red;
+					text-decoration: none;
 				}
 			}
 		}
